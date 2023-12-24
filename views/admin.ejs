@@ -1,0 +1,41 @@
+<!--<form action="/admin/products" method="POST" encType="multipart/form-data">
+    <h3>Upload Product Photo</h3>
+    <input type="file" name="sampleFile" accept="image"/>
+    <input type="text" name = "product_price"/>
+    <input type="submit" style="width:60px"; height="30px">
+</form>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce Admin Panel</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+</head>
+<body>
+    <header>
+        <h1>E-commerce Admin Panel</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/allproducts">Products</a></li>
+            <li><a href="/orders">Orders</a></li>
+            <li><a href="/customers">Customers</a></li>
+             <!--Add more navigation links for different section-->
+        </ul>
+    </nav>
+    <main>
+        <section id="products">
+            <h2><a href="/allproducts">Product Management</a></h2>
+             <!--List of products, add/edit/delete functionality--> 
+        </section>
+        <section id="orders">
+            <h2><a href="/orders">Orders Management</a></h2>
+            <!-- List of orders, processing options, etc.--> 
+        </section>
+        <section id="customers">
+            <h2><a href="/customers">Customers Management</a></h2>
+            <!-- List of customers, edit options, etc.--> 
+        </section>
+         <!--Add more sections for analytics, content management, etc.-->
+    </main>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="orders.css">
+  <title>Order Table Display</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Order Table</h1>
+    <table id="orderTable">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer Email</th>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Purchased Date</th>
+        </tr>
+      </thead>
+      <tbody id="orderTableBody"></tbody>
+    </table>
+  </div>
+  <script src="orders.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        td img {
+            max-width: 100px;
+            max-height: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+        @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+        @font-face {
+            font-family: "Booter - Zero Zero";
+            src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+                url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *{
+            box-sizing: border-box;
+            font-family:Raleway;
+            color: #777;
+
+        }
+
+        html, body{
+            margin:0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        .nav ul{
+            display: inline;
+
+        }
+        .nav li {
+            display: inline;
+        }
+
+        .nav a{
+            display: inline-block;
+            padding: .5em;
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-nav{
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: lighter;
+            border-bottom: 1px solid rgba(255, 255, 255, .3);
+        }
+
+        .nav a:hover{
+            background-color: rgba(255, 255, 255, .3);
+        }
+
+        .main-header{
+            background-color: #56CCF2;
+            background-blend-mode: multiply;
+            background-size: cover;
+            padding-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class ="nav main-nav">
+            <ul>
+                <li><a href= "/homeonline">HOME</a></li>
+                <li><a href= "/about">ABOUT</a></li>
+                <li><a href= "/myorders">MyOrders</a></li>
+                <li><a href= "/admin">ADMIN</a></li>
+                <li><a href= "/login">LOG OUT</a></li>
+            </ul>
+        </nav>
+    <h2>MY MyOrders</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer Email</th>
+                <th>Gender</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Purchased Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Replace the following rows with your actual product data -->
+            <% orders.forEach(function(order){ %>
+                <tr> 
+                    <td><%= order.order_id %></td>
+                    <td><%= order.customer_email %></td>
+                    <td><%= order.customer_gender %></td>
+                    <td><%= order.product_name %></td>
+                    <td><%= order.product_quantity %></td>
+                    <td><%= order.product_price %></td>
+                    <td><%= order.product_category %></td>
+                    <td><%= order.purchased_date %></td>
+                </tr>
+            <% }) %>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</body>
+</html>

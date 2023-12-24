@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        td img {
+            max-width: 100px;
+            max-height: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+        @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+        @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+        @font-face {
+            font-family: "Booter - Zero Zero";
+            src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+                url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *{
+            box-sizing: border-box;
+            font-family:Raleway;
+            color: #777;
+
+        }
+
+        html, body{
+            margin:0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        .nav ul{
+            display: inline;
+
+        }
+        .nav li {
+            display: inline;
+        }
+
+        .nav a{
+            display: inline-block;
+            padding: .5em;
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-nav{
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: lighter;
+            border-bottom: 1px solid rgba(255, 255, 255, .3);
+        }
+
+        .nav a:hover{
+            background-color: rgba(255, 255, 255, .3);
+        }
+
+        .main-header{
+            background-color: #56CCF2;
+            background-blend-mode: multiply;
+            background-size: cover;
+            padding-bottom: 30px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class ="nav main-nav">
+            <ul>
+                <li><a href= "/allproducts">ProductManager</a></li>
+                <li><a href= "/orders">OrderManager</a></li>
+                
+            </ul>
+        </nav>
+    <h2>Cusgtomers Table</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Customer Email</th>
+                <th>Image</th>
+                <th>Cusgtomer Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Replace the following rows with your actual product data -->
+            <% customers.forEach(function(customer){ %>
+                <tr> 
+                    <td><%= customer.user_name %></td>
+                    <td><%= customer.user_email %></td>
+                    <td><img src="<%= customer.user_photo %>" alt="Customer A"></td>
+                    <td><%= customer.user_gender %></td>
+                </tr>
+            <% }) %>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</body>
+</html>

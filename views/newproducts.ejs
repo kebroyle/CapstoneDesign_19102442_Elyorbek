@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel ="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <section class ="container content-section">
+            <h2 class="section-header">DESERTS</h2>
+            <div class="shop-items"></div>
+            <% items.forEach(function(item){ %>  
+                <div class= "shop-item" data-item-id="<%= item.product_id %>">
+                    <span class="shop-item-title"><%= item.product_id %></span>
+                    <img class="shop-item-image" src = <%= item.product_name %> width="200" height="200">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$<%= item.product_image %></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADDTO CART</button>
+                    </div>
+                </div>
+            <% }) %>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+    <link rel="stylesheet" href="deletepr.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Delete a Product</h1>
+        <form id="productForm" class="product-form" action="/delete-product" method="POST">
+
+            <div class="form-group">
+                <label for="product_id">Product ID:</label>
+                <input type="text" id="product_id" name="product_id" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product_price">Product Price:</label>
+                <input type="text" id="product_price" name="product_price" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product_section">Product Section:</label>
+                <input type="text" id="product_section" name="product_section" required>
+            </div>
+
+            
+
+            <button type="submit" class="submit-button">Delete Product</button>
+        </form>
+    </div>
+
+    <!--<script src="crproduct.js"></script> Linking external JavaScript file -->
+</body>
+</html>
